@@ -18,7 +18,7 @@ void ofApp::setup() {
 		ofLogNotice(__FUNCTION__) << "Success loading shader!";
 	}
 
-	plane.set(kColorWidth, kColorHeight, 10, 10);
+	plane.set(kColorWidth/2, kColorHeight, 10, 10);
 	plane.mapTexCoords(0, 0, kColorWidth, kColorHeight);
 }
 
