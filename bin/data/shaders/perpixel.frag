@@ -17,11 +17,11 @@ void main() {
 	if (texCoordVarying.y > uFrameSize.y / 2) {
 		vec4 col = texture(uDepthTex, vec2(texCoordVarying.x, map(texCoordVarying.y, uFrameSize.y, uFrameSize.y/2, 0, uFrameSize.y)));
 		float r = 1.0 - map(col.r, 0, 0.1, 0, 1);
-		r *= mix(1.0, 0, step(0.999, r));
+		r *= mix(1.0, 0, step(0.99999, r));
 		r = pow(r, 3);
 	    outputColor = vec4(r, r, r, 1.0);
 	} else {
-		vec4 col = texture(uColorTex, vec2(texCoordVarying.x, uFrameSize.y - map(texCoordVarying.y, 0, uFrameSize.y/2, 0, uFrameSize.y)));
+		vec4 col = texture(uColorTex, vec2(texCoordVarying.x, map(texCoordVarying.y, uFrameSize.y/2, 0, 0, uFrameSize.y)));
 		outputColor = col;
 	}
 }
