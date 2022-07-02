@@ -11,8 +11,8 @@ void ofApp::setup() {
 
 	// Load shader.
 	auto shaderSettings = ofShaderSettings();
-	shaderSettings.shaderFiles[GL_VERTEX_SHADER] = "shaders/perpixel.vert";
-	shaderSettings.shaderFiles[GL_FRAGMENT_SHADER] = "shaders/perpixel.frag";
+	shaderSettings.shaderFiles[GL_VERTEX_SHADER] = "shaders/perpixel-ou.vert";
+	shaderSettings.shaderFiles[GL_FRAGMENT_SHADER] = "shaders/perpixel-ou.frag";
 	shaderSettings.bindDefaults = true;
 	if (shader.setup(shaderSettings)) {
 		ofLogNotice(__FUNCTION__) << "Success loading shader!";
