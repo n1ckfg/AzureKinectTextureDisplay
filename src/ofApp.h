@@ -25,13 +25,17 @@ class ofApp : public ofBaseApp {
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-	private:
 		ofxAzureKinect::Device kinectDevice;
-		ofEasyCam cam;
-		ofVbo vbo;
 		ofShader shader;
+		ofPlanePrimitive plane;
 
-		float pointSize;
-		bool useColorSpace;
+		void kinectSetup(int res);
+
+		int kColorWidth = 1920;
+		int kColorHeight = 1080;
+		int kDepthWidth = 512;
+		int kDepthHeight = 512;
+
+		void kinectGetAllDims();
 
 };
