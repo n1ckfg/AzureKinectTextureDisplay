@@ -4,34 +4,34 @@
 
 #include "ofxAzureKinect.h"
 
-class ofApp 
-	: public ofBaseApp 
-{
-public:
-	void setup();
-	void exit();
+class ofApp : public ofBaseApp {
 
-	void update();
-	void draw();
+	public:
+		void setup();
+		void exit();
 
-	void keyPressed(int key);
-	void keyReleased(int key);
-	void mouseMoved(int x, int y);
-	void mouseDragged(int x, int y, int button);
-	void mousePressed(int x, int y, int button);
-	void mouseReleased(int x, int y, int button);
-	void mouseEntered(int x, int y);
-	void mouseExited(int x, int y);
-	void windowResized(int w, int h);
-	void dragEvent(ofDragInfo dragInfo);
-	void gotMessage(ofMessage msg);
+		void update();
+		void draw();
 
-private:
-	ofxAzureKinect::Device kinectDevice;
-	ofEasyCam cam;
-	ofVbo vbo;
-	ofShader shader;
+		void keyPressed(int key);
+		void keyReleased(int key);
+		void mouseMoved(int x, int y);
+		void mouseDragged(int x, int y, int button);
+		void mousePressed(int x, int y, int button);
+		void mouseReleased(int x, int y, int button);
+		void mouseEntered(int x, int y);
+		void mouseExited(int x, int y);
+		void windowResized(int w, int h);
+		void dragEvent(ofDragInfo dragInfo);
+		void gotMessage(ofMessage msg);
 
-	float pointSize;
-	bool useColorSpace;
+	private:
+		ofxAzureKinect::Device kinectDevice;
+		ofEasyCam cam;
+		ofVbo vbo;
+		ofShader shader;
+
+		float pointSize;
+		bool useColorSpace;
+
 };
